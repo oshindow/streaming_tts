@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, "/home/xintong/Llasa/transformers-4.34.0/src")  # Add the parent directory to sys.path
+sys.path.insert(0, "/home/xintong/streaming_tts/transformers-4.34.0/src")  # Add the parent directory to sys.path
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 # import soundfile as sf
@@ -8,7 +8,7 @@ llasa_3b ='HKUSTAudio/Llasa-3B'
 
 ### attention sink
 import sys
-sys.path.append("/home/xintong/CosyVoice/attention_sinks")
+sys.path.append("/home/xintong/streaming_tts/attention_sinks")
 from attention_sinks import AutoModelForCausalLM
 model = AutoModelForCausalLM.from_pretrained(llasa_3b,
                                             attention_sink_size=100,
